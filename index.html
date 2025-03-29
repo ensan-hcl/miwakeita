@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <title>Miwa Keita - Portfolio</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    ul {
+      padding-left: 1.2em;
+      /* インデント（任意） */
+      margin-top: 1em;
+      margin-bottom: 1.5em;
+    }
+
+    ul li {
+      margin-bottom: 0.5em;
+      /* ← 各項目の下に余白 */
+      line-height: 1.5;
+      /* ← 行間を広めに */
+    }
+
+    body {
+      font-family: sans-serif;
+      margin: 0;
+    }
+
+    /* ----- Navigation ----- */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 224px;
+      height: 100vh;
+      background-color: #f4f4f4;
+      padding: 2rem 1rem;
+      overflow-y: auto;
+      transition: transform 0.3s ease;
+    }
+
+    nav h1 {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    nav li {
+      margin: 1rem 0;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #007acc;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* ----- Main ----- */
+    main {
+      margin-left: 224px;
+      padding: 2rem;
+      max-width: 800px;
+    }
+
+    h2 {
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 0.3em;
+      margin-top: 2rem;
+    }
+
+    section {
+      margin-bottom: 3rem;
+    }
+
+    .profile-img {
+  width: 180px;
+  height: 180px;
+  border-radius: 45%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 1.5rem auto;
+  border: 5px solid white;
+  box-shadow: 0 0 0 1.2px #d7d7d7; /* 外側にうっすら境界感を加えるとより自然 */
+  background-color: white;
+}
+    /* モバイル専用表示用 */
+    .mobile-only-block {
+      display: none;
+    }
+
+    .social-links {
+      margin-top: 3rem;
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      margin-top: 1rem;
+      padding: 0;
+      background: none;
+      border: none;
+      box-shadow: none;
+    }
+
+    .social-icons a {
+      color: #007acc;
+      font-size: 1.4rem;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .social-icons a:hover {
+      color: #005a99;
+    }
+
+    .mobile-only-flex {
+      display: none;
+    }
+
+    .desktop-only {
+      display: block;
+    }
+
+    @media screen and (max-width: 768px) {
+      nav {
+        display: none;
+      }
+
+      .hamburger {
+        display: none !important;
+      }
+
+      main {
+        margin-left: 0;
+        padding: 1.5rem;
+      }
+
+      .mobile-only-block {
+        display: block;
+      }
+
+      .mobile-only-flex {
+        display: flex;
+      }
+
+      .social-icons {
+        gap: 1rem;
+        justify-content: center;
+        margin-top: 1rem;
+      }
+      .desktop-only {
+        display: none;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <!-- ナビゲーション -->
+  <nav id="sidebar">
+    <h1>Miwa Keita</h1>
+    <img src="profile.jpeg" alt="プロフィール画像" class="profile-img" />
+    <ul>
+      <li><a href="#profile">Profile</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#work">Work Experience</a></li>
+      <li><a href="#publications">Publication</a></li>
+      <li><a href="#talks">Talks & Appearances</a></li>
+      <li><a href="#media">Media Coverage</a></li>
+      <li><a href="#awards">Awards</a></li>
+      <li><a href="#projects">Personal Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <div class="social-icons">
+      <a href="mailto:miwakeita.contact@gmail.com" target="_blank" aria-label="Email">
+        <i class="fas fa-envelope"></i>
+      </a>
+      <a href="https://twitter.com/your_username" target="_blank" aria-label="X">
+        <i class="fab fa-x-twitter"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/your_linkedin_id" target="_blank" aria-label="LinkedIn">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="https://github.com/ensan-hcl" target="_blank" aria-label="GitHub">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+  </nav>
+
+  <main>
+    <section id="profile">
+      <h2 class="desktop-only">About</h2>
+      <h2 class="mobile-only-block">Miwa Keita (三輪 敬太)</h1>
+
+        <img src="profile.jpeg" alt="プロフィール画像" class="profile-img mobile-only-block" />
+
+        <div class="social-icons mobile-only-flex">
+          <a href="mailto:miwakeita.contact@gmail.com" target="_blank" aria-label="Email">
+            <i class="fas fa-envelope"></i>
+          </a>
+          <a href="https://twitter.com/miwa_ensan" target="_blank" aria-label="X">
+            <i class="fab fa-x-twitter"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/keita-miwa-996bb12b4/" target="_blank" aria-label="LinkedIn">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://github.com/ensan-hcl" target="_blank" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+
+        <p>
+        機械学習・自然言語処理を専門とするリサーチャ／エンジニアです。  
+        東京大学教養学部で言語学・自然言語処理を学んだ後、現在はTuring株式会社にて自動運転領域の研究者として勤務しています。
+        </p>
+        <p>
+        また、日本語入力システムの研究・実装に関心があり、iOS向けの日本語キーボードアプリ「azooKey」の開発・運用を個人で行っています。  
+        学会発表やソフトウェアエンジニアとしてのカンファレンス登壇、IPA未踏プロジェクト採択、メディア掲載など幅広く活動中です。
+      </p>
+    </section>
+
+    <section id="education">
+      <h2>Education</h2>
+      <ul>
+        <li>2020年4月〜2024年3月：東京大学 教養学部（言語学・自然言語処理）</li>
+        <li>2024年4月〜：東京大学大学院 総合文化研究科 言語情報科学専攻</li>
+      </ul>
+    </section>
+
+    <section id="work">
+      <h2>Work Experience</h2>
+      <ul>
+        <li>2021年10月〜2024年3月：Turing株式会社 インターン</li>
+        <li>2022年7月〜9月：Google合同会社 ソフトウェアエンジニア インターン</li>
+        <li>2023年6月〜2024年3月：Google合同会社 Research Student</li>
+        <li>2024年4月〜：Turing株式会社 機械学習エンジニア・リサーチャ（正社員）</li>
+      </ul>
+    </section>
+
+    <section id="publications">
+      <h2>Publication</h2>
+      <ul>
+        <li>
+          Keita Miwa, Naoki Takahashi,
+          "<a href="https://www.anlp.jp/proceedings/annual_meeting/2025/pdf_dir/P1-19.pdf"
+            target="_blank">ニューラルかな漢字変換システム Zenzai</a>",
+          <i>言語処理学会第31回年次大会 発表論文集</i>, 2025.
+          （若手奨励賞受賞）
+        </li>
+        <li>
+          Keita Miwa, Kento Sasaki, Hidehisa Arai, Tsubasa Takahashi, Yu Yamaguchi,
+          "<a href="https://arxiv.org/abs/2501.10064" target="_blank">One-D-Piece: Image Tokenizer Meets
+            Quality-Controllable Compression</a>",
+          <i>arXiv preprint arXiv:2501.10064</i>, 2025.
+        </li>
+        <li>
+          Keita Miwa, Hidehisa Arai, Kento Sasaki, Kohei Watanabe, Yu Yamaguchi,
+          "自動運転のための言語・視覚・動作の統合データセットの構築",
+          <i>第19回 言語処理若手シンポジウム（YANS）</i>, 2024.
+          （奨励賞受賞）
+        </li>
+        <li>
+          Hidehisa Arai, Keita Miwa, Kento Sasaki, Yu Yamaguchi, Kohei Watanabe, Shunsuke Aoki, Issei Yamamoto,
+          "<a href="https://arxiv.org/abs/2408.10845" target="_blank">CoVLA: Comprehensive Vision-Language-Action
+            Dataset for Autonomous Driving</a>",
+          <i>Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)</i>, 2025.
+        </li>
+        <li>
+          Keita Miwa, Ryo Yoshida, Yohei Oseki,
+          "工学的性能と人間らしさの関係はトークン分割に依存する",
+          <i>言語処理学会第30回年次大会 発表論文集</i>, 2024.
+        </li>
+        <li>
+          Keita Miwa, Ryo Yoshida, Yohei Oseki,
+          "人間らしい言語モデルのトークン分割単位はどのようなものか?",
+          <i>研究報告自然言語処理 (NL)</i>, vol. 2023, no. 21, pp. 1–7, 2023.
+        </li>
+        <li>
+          Kohei Iwamasa, Daiki Shiotsuka, Yu Yamaguchi, Keita Miwa, Shunsuke Aoki,
+          "自動運転のための大規模走行データセットを用いた深層学習による信号機認識",
+          <i>人工知能学会全国大会論文集 第37回</i>, 2023.
+        </li>
+        <li>
+          Shunsuke Aoki, Issei Yamamoto, Daiki Shiotsuka, Yuichi Inoue, Kento Tokuhiro, Keita Miwa,
+          "<a href="https://ieeexplore.ieee.org/abstract/document/10136277" target="_blank">SuperDriverAI: Towards
+            Design and Implementation for End-to-End Learning-Based Autonomous Driving</a>",
+          <i>2023 IEEE Vehicular Networking Conference (VNC)</i>, pp. 195–198, 2023.
+        </li>
+      </ul>
+    </section>
+    <section id="talks">
+      <h2>Talks & Appearances</h2>
+      <ul>
+        <li>
+          <a href="https://fortee.jp/iosdc-japan-2023/proposal/87be3428-5381-4aa3-8127-cfd714663429" target="_blank">
+            iOSのKeyboard Extensionで日本語入力できるキーボードアプリを作ろう！
+            - iOSDC Japan 2023
+          </a>
+        </li>
+        <li>
+          <a href="https://fukabori.fm/episode/120" target="_blank">
+            #120. ニューラルかな漢字変換 w/ miwa_ensan - fukabori.fm（Podcast出演）
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <section id="media">
+      <h2>Media Coverage</h2>
+      <ul>
+        <li>
+          <a href="https://www.nikkei.com/article/DGKKZO77665450V10C24A1X45000/" target="_blank">
+            （一押しアプリ） azooKey　よく使う単語 簡単入力 - 日本経済新聞（2024年1月16日）
+          </a>
+        </li>
+        <li>
+          <a href="https://www.itmedia.co.jp/news/articles/2411/05/news128.html" target="_blank">
+            HHKBキラー？東プレ「REALFORCE RC1」を試す - ITmedia NEWS（2024年11月5日）
+          </a>
+        </li>
+      </ul>
+    </section>
+    <section id="awards">
+      <h2>Awards & Honors</h2>
+      <ul>
+        <li>
+          <strong>未踏IT人材発掘・育成事業 採択</strong>
+          情報処理推進機構（IPA）、2024年6月
+          プロジェクト名：「ニューラル言語モデルによる個人最適な日本語入力システムの開発」
+          <a href="https://www.ipa.go.jp/jinzai/mitou/it/2024/gaiyou-ok-3.html" target="_blank">詳細はこちら</a>
+        </li>
+        <li>
+          <strong>若手奨励賞</strong>
+          言語処理学会 第31回年次大会（NLP2025）、2025年
+          発表論文：「<a href="https://www.anlp.jp/proceedings/annual_meeting/2025/pdf_dir/P1-19.pdf"
+            target="_blank">ニューラルかな漢字変換システム Zenzai</a>」
+        </li>
+        <li>
+          <strong>奨励賞</strong>
+          第19回 言語処理若手シンポジウム（YANS2024）、2024年
+          発表タイトル：「自動運転のための言語・視覚・動作の統合データセットの構築」
+        </li>
+      </ul>
+    </section>
+
+    <section id="projects">
+      <h2>Personal Projects</h2>
+      <ul>
+        <li>
+          <strong><a href="https://apps.apple.com/app/id1529223603" target="_blank">azooKey</a></strong>
+          OSSの日本語入力キーボードアプリ（iOS）。Swiftで開発され、App Storeでも公開中。シンプルで柔軟なカスタムキーボードが特徴。
+          <br />
+          <a href="https://github.com/ensan-hcl/azooKey" target="_blank">GitHub</a> |
+          <a href="https://azookey.netlify.app" target="_blank">Website</a>
+        </li>
+
+        <li>
+          <strong><a href="https://github.com/ensan-hcl/AzooKeyKanaKanjiConverter"
+              target="_blank">AzooKeyKanaKanjiConverter</a></strong>
+          ニューラル日本語入力エンジン「Zenzai」を実装した、かな漢字変換のSwiftパッケージ。azooKeyの中核を担う。
+        </li>
+
+        <li>
+          <strong><a href="https://github.com/ensan-hcl/azooKey-Desktop" target="_blank">azooKey for macOS</a></strong>
+          macOS向けの日本語入力システム。「Zenzai」を搭載。
+        </li>
+
+      </ul>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>
+        ご連絡は <a href="mailto:miwakeita.contact@gmail.com">miwakeita.contact@gmail.com</a> までお願いします。<br>
+        または、<a href="https://x.com/miwa_ensan">X</a> のDMまでお願いします。<br>
+      </p>
+    </section>
+  </main>
+</body>
+
+</html>
