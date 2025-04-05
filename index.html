@@ -44,7 +44,7 @@
       left: 0;
       width: 224px;
       height: 100vh;
-      background-color: #f4f4f4;
+      background-color: white;
       padding: 2rem 1rem;
       overflow-y: auto;
       transition: transform 0.3s ease;
@@ -66,11 +66,20 @@
 
     nav a {
       text-decoration: none;
-      color: #007acc;
+      color: #0055aa;
     }
 
     nav a:hover {
       text-decoration: underline;
+    }
+
+    a {
+      color: #0055aa;
+      text-decoration: underline;
+    }
+
+    a:hover {
+      color: #3399ff;
     }
 
     /* ----- Main ----- */
@@ -91,16 +100,18 @@
     }
 
     .profile-img {
-  width: 180px;
-  height: 180px;
-  border-radius: 45%;
-  object-fit: cover;
-  display: block;
-  margin: 0 auto 1.5rem auto;
-  border: 5px solid white;
-  box-shadow: 0 0 0 1.2px #d7d7d7; /* 外側にうっすら境界感を加えるとより自然 */
-  background-color: white;
-}
+      width: 180px;
+      height: 180px;
+      border-radius: 45%;
+      object-fit: cover;
+      display: block;
+      margin: 0 auto 1.5rem auto;
+      border: 5px solid white;
+      box-shadow: 0 0 0 1.2px #d7d7d7;
+      /* 外側にうっすら境界感を加えるとより自然 */
+      background-color: white;
+    }
+
     /* モバイル専用表示用 */
     .mobile-only-block {
       display: none;
@@ -124,14 +135,14 @@
     }
 
     .social-icons a {
-      color: #007acc;
+      color: #0055aa;
       font-size: 1.4rem;
       text-decoration: none;
       transition: color 0.3s;
     }
 
     .social-icons a:hover {
-      color: #005a99;
+      color: #3399ff;
     }
 
     .mobile-only-flex {
@@ -140,6 +151,33 @@
 
     .desktop-only {
       display: block;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      body {
+        background-color: #121212;
+        color: #e0e0e0;
+      }
+      nav {
+        background-color: #1e1e1e;
+      }
+      nav a,
+      .social-icons a {
+        color: #66ccff;
+      }
+
+      nav a:hover,
+      .social-icons a:hover {
+        color: #99ddff;
+      }
+
+      a {
+        color: #66ccff;
+      }
+
+      a:hover {
+        color: #99ddff;
+      }
     }
 
     @media screen and (max-width: 768px) {
@@ -169,6 +207,7 @@
         justify-content: center;
         margin-top: 1rem;
       }
+
       .desktop-only {
         display: none;
       }
@@ -234,13 +273,13 @@
         </div>
 
         <p>
-        機械学習・自然言語処理を専門とするリサーチャ／エンジニアです。  
-        東京大学教養学部で言語学・自然言語処理を学んだ後、現在はTuring株式会社にて自動運転領域の研究者として勤務しています。
+          機械学習・自然言語処理を専門とするリサーチャ／エンジニアです。
+          東京大学教養学部で言語学・自然言語処理を学んだ後、現在はTuring株式会社にて自動運転領域の研究者として勤務しています。
         </p>
         <p>
-        また、日本語入力システムの研究・実装に関心があり、iOS向けの日本語キーボードアプリ「azooKey」の開発・運用を個人で行っています。  
-        学会発表やソフトウェアエンジニアとしてのカンファレンス登壇、IPA未踏プロジェクト採択、メディア掲載など幅広く活動中です。
-      </p>
+          また、日本語入力システムの研究・実装に関心があり、iOS向けの日本語キーボードアプリ「azooKey」の開発・運用を個人で行っています。
+          学会発表やソフトウェアエンジニアとしてのカンファレンス登壇、IPA未踏プロジェクト採択、メディア掲載など幅広く活動中です。
+        </p>
     </section>
 
     <section id="education">
